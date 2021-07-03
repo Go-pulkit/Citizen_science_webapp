@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+  {%block content%}
+
+  <h3>Welcome back {{ current_user.name }}</h3>
+  <h4> You have made {{contributions}} previous contributions! Contibute more below: </h4>
+      <!--{% for i in contributions %}
+      <ul>{{i.place}} {{i.time}} {{i.count}} {{i.bird_id}} </ul>
+      {% endfor %}-->
+     
+  <form method = 'post'>
+    {{ template_form.hidden_tag() }}
+    {{ template_form.place.label }}          
+    {{ template_form.place() }}
+    {{ template_form.count.label }}
+    {{ template_form.count() }}
+    {{ template_form.time_of_day.label }}
+    {{ template_form.time_of_day() }}
+    {{ template_form.species.label }}
+    {{ template_form.species() }}
+    {{ template_form.submit() }}
+  </form>
+  {% with messages = get_flashed_messages() %}  
+  {% if messages %}  
+        {% for message in messages %}  
+             <p>{{ message }}</p>  
+        {% endfor %}  
+  {% endif %}  
+{% endwith %}  
+
+  {%endblock%}

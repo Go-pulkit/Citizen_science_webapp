@@ -1,0 +1,21 @@
+{%extends 'base.html' %}
+  {%block content%}
+
+   <form action='/login', method = 'post'>
+    {{ template_form.hidden_tag() }}
+    {{ template_form.email.label }}
+    {{ template_form.email() }}
+    {{ template_form.password.label }}
+    {{ template_form.password() }}
+    {{ template_form.submit() }}
+  </form>
+  {% with messages = get_flashed_messages() %}  
+  {% if messages %}  
+        {% for message in messages %}  
+             <p>{{ message }}</p>  
+        {% endfor %}  
+  {% endif %}  
+{% endwith %} 
+
+<a href="{{ url_for('logout') }}">Logout</a>
+  {%endblock%}
