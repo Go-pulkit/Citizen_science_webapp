@@ -5,7 +5,7 @@ It is a citizen science web app called 'Bird Sight'.
 It allows people to submit various types of data on bird sightings
 for understanding their distribution, population dynamics and to bring together a community of birders in general.
 
-People need to register/login to submit data to the database.
+People need to register/login to submit data to the database by becoming users
 The homepage fetches a variety of data queried from the database like total species, bird counts, no. of participants etc. 
 """
 #Import the required modules from flask framework and initialize an app instance of Flask.
