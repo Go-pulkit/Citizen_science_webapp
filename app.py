@@ -6,7 +6,8 @@ It allows people to submit various types of data on bird sightings
 for understanding their distribution, population dynamics and to bring together a community of birders in general.
 
 People need to register/login to submit data to the database by becoming users
-The homepage fetches a variety of data queried from the database like total species, bird counts, no. of participants etc. 
+The homepage fetches a variety of data queried from the database like total species, bird counts, no. of participants etc.
+Currently no support for image upload and 3rd party logins is available. Planning to add in future versions! 
 """
 #Import the required modules from flask framework and initialize an app instance of Flask.
 from flask import Flask, render_template, redirect, url_for, flash, request
